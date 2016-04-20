@@ -1,3 +1,8 @@
 #!/usr/bin/env ruby
+if ENV['CLICUMBER_ENV'] == 'test'
+  require "simplecov"
+  SimpleCov.start { command_name 'Binary' }
+end
 
-puts "hello"
+require_relative '../lib/mylib'
+MyLib.run

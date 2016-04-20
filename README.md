@@ -1,3 +1,3 @@
-# Solution attempt 1
+# Solution attempt 2
 
-Based on <http://stackoverflow.com/a/36705710/413924>
+Starting Simplecov from the binary itself

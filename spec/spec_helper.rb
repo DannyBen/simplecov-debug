@@ -1,12 +1,7 @@
 require 'simplecov'
+SimpleCov.start { command_name 'Main' }
 
-SimpleCov.command_name "main_report"
-SimpleCov.start do
-  filters.clear # This will remove the :root_filter and :bundler_filter that come via simplecov's defaults
-  add_filter do |src|
-    !(src.filename =~ /^#{SimpleCov.root}/) unless src.filename =~ /bin/ #make sure the bin directory is allowed
-  end
-end
+ENV['CLICUMBER_ENV'] = 'test'
 
 require 'rubygems'
 require 'bundler'
